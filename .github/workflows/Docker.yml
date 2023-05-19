@@ -9,6 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Download main file
+        uses: actions/download-artifact@v2.1.1
+        with:
+          name: file
+
       - name: Set up Docker build
         uses: docker/setup-buildx-action@v2.5.0
 
